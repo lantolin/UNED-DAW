@@ -1,0 +1,18 @@
+---
+config:
+  theme: default
+  htmlLabels: false
+  markdownAutoWrap: false
+  wrap: false
+---
+graph TD
+    A1[dc=internal] 
+    A2[dc=lantolin42] 
+    A3[dc=ldap] 
+    A1 --- A2
+    A2 --- A3
+    A3 --- C1[ou=gru-labs]
+    C1 --- K[uid=kevin]
+    C1 --- BOB[uid=bob]
+    C1 --- ST[uid=stuart]
+

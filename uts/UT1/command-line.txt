@@ -1,0 +1,19 @@
+
+# contenedor docker
+
+docker pull minlag/mermaid-cli
+# posicionado en donde esten los diagramas y siendo tu UID y GID 1000
+docker run --rm -u 1000:1000 -v .:/data minlag/mermaid-cli -e svg -i grafico-dit-1.mmd
+docker run --rm -u 1000:1000 -v .:/data minlag/mermaid-cli -e svg -i grafico-dit-2.mmd
+docker run --rm -u 1000:1000 -v .:/data minlag/mermaid-cli -e svg -i grafico-dit-3.mmd
+docker run --rm -u 1000:1000 -v .:/data minlag/mermaid-cli -e png -i grafico-dit-1.mmd
+docker run --rm -u 1000:1000 -v .:/data minlag/mermaid-cli -e png -i grafico-dit-2.mmd
+docker run --rm -u 1000:1000 -v .:/data minlag/mermaid-cli -e png -i grafico-dit-3.mmd
+
+cp *.svg ~/Dropbox/UNED/modulos/2DAW-DAW/presentaciones/PEC/PEC1/img/
+
+# Para que los SVGs renderizen bien en EOG y otros programas (en browser si van bien)  hay que poner 
+---
+config:
+  htmlLabels: false
+---
